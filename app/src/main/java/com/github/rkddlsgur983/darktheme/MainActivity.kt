@@ -1,5 +1,6 @@
 package com.github.rkddlsgur983.darktheme
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
@@ -23,6 +24,7 @@ class MainActivity : BaseAppCompatActivity() {
     private fun initView() {
         setAppThemeStringArray()
         initAppThemeButton()
+        initOpenSecondButton()
     }
 
     private fun setAppThemeStringArray() {
@@ -44,6 +46,15 @@ class MainActivity : BaseAppCompatActivity() {
                 dialog.dismiss()
             }
             .show()
+    }
+
+    private fun initOpenSecondButton() {
+        binding.openSecondButton.setOnClickListener { goToSecondActivity() }
+    }
+
+    private fun goToSecondActivity() {
+        val intent = Intent(this, SecondActivity::class.java)
+        startActivity(intent)
     }
 
 }
