@@ -1,4 +1,4 @@
-package com.github.rkddlsgur983.darktheme.sharedpreference
+package com.github.rkddlsgur983.darktheme.util
 
 import android.content.Context
 import com.github.rkddlsgur983.darktheme.theme.AppTheme

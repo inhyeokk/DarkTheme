@@ -2,7 +2,7 @@ package com.github.rkddlsgur983.darktheme
 
 import android.app.Application
 import androidx.appcompat.app.AppCompatDelegate
-import com.github.rkddlsgur983.darktheme.sharedpreference.SharedPreferenceManager
+import com.github.rkddlsgur983.darktheme.util.SharedPreferenceManager
 
 class MainApplication : Application() {
 

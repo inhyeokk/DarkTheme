@@ -3,7 +3,7 @@ package com.github.rkddlsgur983.darktheme.theme
 import android.os.Build
 import androidx.appcompat.app.AppCompatDelegate
 import com.github.rkddlsgur983.darktheme.util.SdkVersion
-import com.github.rkddlsgur983.darktheme.sharedpreference.SharedPreferenceManager
+import com.github.rkddlsgur983.darktheme.util.SharedPreferenceManager
 
 object ThemeUtil {
 
