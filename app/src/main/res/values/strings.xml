@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DarkTheme</string>
+
+    <string name="app_theme">App Theme</string>
+    <string name="app_theme_default">System Setting Mode</string>
+    <string name="app_theme_light">Light Mode</string>
+    <string name="app_theme_dark">Dark Mode</string>
 </resources>
