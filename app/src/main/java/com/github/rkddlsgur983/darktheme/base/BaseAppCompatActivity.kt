@@ -8,7 +8,7 @@ open class BaseAppCompatActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Logger.printLifeCycleLog(this, "onCreate")
+        Logger.printLifeCycleLog(this, "onCreate savedInstanceState is null " + (savedInstanceState == null))
     }
 
     override fun onStart() {
