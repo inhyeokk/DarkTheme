@@ -1,8 +1,6 @@
 package com.github.rkddlsgur983.darktheme.base
 
-import android.content.res.Configuration
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.github.rkddlsgur983.darktheme.util.Logger
 
