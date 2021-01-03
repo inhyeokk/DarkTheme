@@ -2,13 +2,13 @@ package com.github.rkddlsgur983.darktheme
 
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import com.github.rkddlsgur983.darktheme.base.BaseAppCompatActivity
 import com.github.rkddlsgur983.darktheme.databinding.ActivityMainBinding
 import com.github.rkddlsgur983.darktheme.theme.ThemeUtil
 import com.github.rkddlsgur983.darktheme.util.SharedPreferenceManager
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseAppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var appThemeList: Array<String>
