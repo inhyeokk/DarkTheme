@@ -10,4 +10,8 @@ open class BaseSharedPreference<T: Any>(context: Context, name: String, val key:
     var value: T
         get() = prefs.get(key, defValue)
         set(value) = prefs.set(key, value)
+
+    companion object {
+        const val SHARED_PREFERENCE_NAME = "DARK_MODE_PREFERENCE"
+    }
 }
