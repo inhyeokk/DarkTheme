@@ -1,5 +1,6 @@
 package com.github.rkddlsgur983.darktheme.base
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.github.rkddlsgur983.darktheme.util.Logger
@@ -50,4 +51,10 @@ open class BaseAppCompatActivity : AppCompatActivity() {
         super.onDestroy()
         Logger.printLifeCycleLog(this, "onDestroy")
     }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        Logger.printLifeCycleLog(this, "onConfigurationChanged")
+    }
+
 }

@@ -1,6 +1,7 @@
 package com.github.rkddlsgur983.darktheme.base
 
 import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -64,4 +65,10 @@ open class BaseFragment : Fragment() {
         super.onDetach()
         Logger.printLifeCycleLog(this, "onDetach")
     }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        Logger.printLifeCycleLog(this, "onConfigurationChanged")
+    }
+
 }
