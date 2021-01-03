@@ -7,14 +7,14 @@ import com.github.rkddlsgur983.darktheme.sharedpreference.SharedPreferenceManage
 
 object ThemeUtil {
 
-    fun getInAppThemeMode() = when (SharedPreferenceManager.getAppTheme()) {
+    fun getAppTheme() = when (SharedPreferenceManager.getAppTheme()) {
         AppTheme.LIGHT -> {
             AppCompatDelegate.MODE_NIGHT_NO
         }
         AppTheme.DARK -> {
             AppCompatDelegate.MODE_NIGHT_YES
         }
-        else -> {
+        else -> { // DEFAULT or else
             if (isSupportSystemNightMode()) {
                 AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
             } else {
@@ -23,14 +23,17 @@ object ThemeUtil {
         }
     }
 
-    private fun isSupportSystemNightMode(): Boolean = SdkVersion.isQOrAbove() || isSupportSystemNightModeBelow10()
-
-    // 예외적으로 안드로이드 P + 삼성 단말의 경우, OS 자체에서 다크 모드를 지원함
-    private fun isSupportSystemNightModeBelow10(): Boolean {
-        return SdkVersion.isPieOrAbove() && isSamSungMobile()
+    /**
+     * 다크모드 지원 버전
+     * 1. 10 이상
+     * 2. 9 + 삼성 단말 (One UI 1.0에서 자체적으로 다크 모드를 지원함)
+     */
+    private fun isSupportSystemNightMode(): Boolean {
+        return SdkVersion.isOverThanQ() || (SdkVersion.isOverThanPie() && isSamSungMobile())
     }
 
     private fun isSamSungMobile(): Boolean {
         return "SAMSUNG".equals(Build.MANUFACTURER, ignoreCase = true)
     }
+
 }
