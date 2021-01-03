@@ -12,5 +12,22 @@ class SecondActivity : BaseAppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        if (savedInstanceState == null) {
+            initFragment()
+        }
+    }
+
+    private fun initFragment() {
+        val tag = SecondFragment.TAG
+        var fragment = supportFragmentManager.findFragmentByTag(tag)
+        if (fragment == null) {
+            fragment = SecondFragment()
+        }
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_layout, fragment, tag)
+            .commit()
     }
 }
