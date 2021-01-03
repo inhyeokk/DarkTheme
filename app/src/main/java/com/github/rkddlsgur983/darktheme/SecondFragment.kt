@@ -1,17 +1,17 @@
 package com.github.rkddlsgur983.darktheme
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
+import com.github.rkddlsgur983.darktheme.base.BaseFragment
 import com.github.rkddlsgur983.darktheme.databinding.FragmentSecondBinding
 import com.github.rkddlsgur983.darktheme.theme.ThemeUtil
 import com.github.rkddlsgur983.darktheme.util.SharedPreferenceManager
 
-class SecondFragment : Fragment() {
+class SecondFragment : BaseFragment() {
 
     private lateinit var binding: FragmentSecondBinding
     private lateinit var appThemeList: Array<String>
